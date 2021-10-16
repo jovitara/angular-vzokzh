@@ -1,4 +1,12 @@
-<h2>Product</h2>
+<h2>PREKIŲ SĄRAŠAS</h2>
+
+<div *ngFor="let product of products">
+ <h3>
+ <a [title]="'Kaina: '+product.price + ' EUR'">
+ {{ product.name }}
+</a>
+</h3> 
+</div>
 
 
 <!-- 
