@@ -1,13 +1,24 @@
 <h2>PREKIŲ SĄRAŠAS</h2>
 
 <div *ngFor="let product of products">
- <h3>
- <a [title]="'Kaina: '+product.price + ' EUR'">
- {{ product.name }}
-</a>
-</h3> 
-</div>
+  <h3>
+    <a [title]="'Kaina: ' + product.price + ' EUR'">
+      {{ product.name }}
+    </a>
+  </h3>
+  <p *ngIf="product.price > 300">Description: {{ product.description }}</p>
 
+
+  <button (click)="share()">
+    <i class="material-icons text-white">share</i>
+    Share to Facebook
+  </button>
+  <hr />
+  <button (click)="share()">
+    <i class="material-icons text-white">share</i>
+    Share to Twitter
+  </button>
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
